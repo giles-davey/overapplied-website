@@ -24,14 +24,13 @@ export const metadata: Metadata = {
 
 function Hero() {
   return (
-    <div className="relative">
-      <Gradient className="absolute inset-2 bottom-0 rounded-4xl ring-1 ring-black/5 ring-inset" />
+    <div className="relative bg-gradient-to-br from-[#7512d9] via-[#9a2fe8] to-[#c879ff] text-white">
       <Container className="relative">
         <Navbar
           banner={
             <Link
               href="/blog/radiant-raises-100m-series-a-from-tailwind-ventures"
-              className="flex items-center gap-1 rounded-full bg-fuchsia-950/35 px-3 py-0.5 text-sm/6 font-medium text-white data-hover:bg-fuchsia-950/30"
+              className="flex items-center gap-1 rounded-full bg-electric-violet-700/35 px-3 py-0.5 text-sm/6 font-medium text-white data-hover:bg-electric-violet-800/30"
             >
               Radiant raises $100M Series A from Tailwind Ventures
               <ChevronRightIcon className="size-4" />
@@ -39,17 +38,15 @@ function Hero() {
           }
         />
         <div className="pt-16 pb-24 sm:pt-24 sm:pb-32 md:pt-32 md:pb-48">
-          <h1 className="font-display text-6xl/[0.9] font-medium tracking-tight text-balance text-gray-950 sm:text-8xl/[0.8] md:text-9xl/[0.8]">
-            Close every deal.
+          <h1 className="font-display text-6xl/[0.9] font-semibold tracking-tight text-balance text-electric-violet-900 sm:text-8xl/[0.8] md:text-9xl/[0.8]">
+            OverApplied
           </h1>
-          <p className="mt-8 max-w-lg text-xl/7 font-medium text-gray-950/75 sm:text-2xl/8">
-            Radiant helps you sell more by revealing sensitive information about
-            your customers.
+          <p className="mt-8 max-w-xl text-xl/7 font-medium text-electric-violet-700/75 sm:text-2xl/8">
+            It’s not who you know, it’s what you know.
           </p>
-          <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
-            <Button href="#">Get started</Button>
-            <Button variant="secondary" href="/pricing">
-              See pricing
+          <div className="mt-12 flex justify-center">
+            <Button className="bg-electric-violet-600 hover:bg-electric-violet-700" href="/signup">
+              Sign up now
             </Button>
           </div>
         </div>
@@ -58,135 +55,76 @@ function Hero() {
   )
 }
 
-function FeatureSection() {
+function StepsSection() {
   return (
-    <div className="overflow-hidden">
-      <Container className="pb-24">
-        <Heading as="h2" className="max-w-3xl">
-          A snapshot of your entire sales pipeline.
-        </Heading>
-        <Screenshot
-          width={1216}
-          height={768}
-          src="/screenshots/app.png"
-          className="mt-16 h-144 sm:h-auto sm:w-304"
-        />
-      </Container>
-    </div>
-  )
-}
-
-function BentoSection() {
-  return (
-    <Container>
-      <Subheading>Sales</Subheading>
-      <Heading as="h3" className="mt-2 max-w-3xl">
-        Know more about your customers than they do.
-      </Heading>
-
-      <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
-        <BentoCard
-          eyebrow="Insight"
-          title="Get perfect clarity"
-          description="Radiant uses social engineering to build a detailed financial picture of your leads. Know their budget, compensation package, social security number, and more."
-          graphic={
-            <div className="h-80 bg-[url(/screenshots/profile.png)] bg-size-[1000px_560px] bg-position-[left_-109px_top_-112px] bg-no-repeat" />
-          }
-          fade={['bottom']}
-          className="max-lg:rounded-t-4xl lg:col-span-3 lg:rounded-tl-4xl"
-        />
-        <BentoCard
-          eyebrow="Analysis"
-          title="Undercut your competitors"
-          description="With our advanced data mining, you’ll know which companies your leads are talking to and exactly how much they’re being charged."
-          graphic={
-            <div className="absolute inset-0 bg-[url(/screenshots/competitors.png)] bg-size-[1100px_650px] bg-position-[left_-38px_top_-73px] bg-no-repeat" />
-          }
-          fade={['bottom']}
-          className="lg:col-span-3 lg:rounded-tr-4xl"
-        />
-        <BentoCard
-          eyebrow="Speed"
-          title="Built for power users"
-          description="It’s never been faster to cold email your entire contact list using our streamlined keyboard shortcuts."
-          graphic={
-            <div className="flex size-full pt-10 pl-10">
-              <Keyboard highlighted={['LeftCommand', 'LeftShift', 'D']} />
-            </div>
-          }
-          className="lg:col-span-2 lg:rounded-bl-4xl"
-        />
-        <BentoCard
-          eyebrow="Source"
-          title="Get the furthest reach"
-          description="Bypass those inconvenient privacy laws to source leads from the most unexpected places."
-          graphic={<LogoCluster />}
-          className="lg:col-span-2"
-        />
-        <BentoCard
-          eyebrow="Limitless"
-          title="Sell globally"
-          description="Radiant helps you sell in locations currently under international embargo."
-          graphic={<Map />}
-          className="max-lg:rounded-b-4xl lg:col-span-2 lg:rounded-br-4xl"
-        />
+    <Container className="py-20 flex flex-col items-center text-center">
+      <h2 className="text-3xl font-semibold text-electric-violet-800">We’re a work in progress</h2>
+      <p className="mt-4 text-lg text-gray-700 max-w-2xl mx-auto">
+        Overapplied is in beta. We’re building a new kind of job search and recruiting process — prioritizing skills and projects, not just titles and who you know. Join our early talent community and share feedback as we prepare for launch.
+      </p>
+      <p className="mt-2 text-sm text-gray-500">No employers yet — we’re building the foundation first.</p>
+      <div className="mt-10 grid gap-6 sm:grid-cols-3 justify-center">
+        <div>
+          <h3 className="text-xl font-bold text-electric-violet-700">1. Create your profile</h3>
+          <p className="text-gray-600 mt-2">Tell us about your experience and goals.</p>
+        </div>
+        <div>
+          <h3 className="text-xl font-bold text-electric-violet-700">2. Verify your job</h3>
+          <p className="text-gray-600 mt-2">Confirm where you work so we can match you more accurately.</p>
+        </div>
+        <div>
+          <h3 className="text-xl font-bold text-electric-violet-700">3. Get notified</h3>
+          <p className="text-gray-600 mt-2">We’ll alert you when matches open up.</p>
+        </div>
       </div>
     </Container>
   )
 }
 
-function DarkBentoSection() {
-  return (
-    <div className="mx-2 mt-2 rounded-4xl bg-gray-900 py-32">
-      <Container>
-        <Subheading dark>Outreach</Subheading>
-        <Heading as="h3" dark className="mt-2 max-w-3xl">
-          Customer outreach has never been easier.
-        </Heading>
+function FAQSection() {
+  const faqs = [
+    { q: 'What is Overapplied?', a: 'Overapplied is a smarter way to job search and hire — matching candidates and companies based on skills, projects, and context.' },
+    { q: 'What does verification mean?', a: 'We verify employment via LinkedIn or work email so we can better tailor your matches.' },
+    { q: 'Does formatting affect scoring?', a: 'Nope. Our system reads raw content. Focus on substance, not style.' },
+    { q: 'What happens to my data?', a: 'You control it. Delete anytime. No data is sold or shared without your permission.' },
+    { q: 'How do I delete or export my profile?', a: 'You can do both in one click via your account settings.' },
+    { q: 'Will employers see this?', a: 'Not yet. You’re early! Only you can see your profile until you opt in.' },
+    { q: 'Example profile previews (optional)', a: 'We’ll show you how your profile will look once employer access is live.' }
+  ]
 
-        <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
-          <BentoCard
-            dark
-            eyebrow="Networking"
-            title="Sell at the speed of light"
-            description="Our RadiantAI chat assistants analyze the sentiment of your conversations in real time, ensuring you're always one step ahead."
-            graphic={
-              <div className="h-80 bg-[url(/screenshots/networking.png)] bg-size-[851px_344px] bg-no-repeat" />
-            }
-            fade={['top']}
-            className="max-lg:rounded-t-4xl lg:col-span-4 lg:rounded-tl-4xl"
+  return (
+    <Container className="py-20">
+      <h2 className="text-3xl font-semibold text-electric-violet-800 text-center mb-10">FAQs</h2>
+      <div className="grid sm:grid-cols-2 gap-8">
+        {faqs.map((item, i) => (
+          <div key={i}>
+            <h3 className="text-lg font-semibold text-electric-violet-700">{item.q}</h3>
+            <p className="text-gray-600 mt-2">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </Container>
+  )
+}
+
+function MailingListFooter() {
+  return (
+    <Container className="py-16 border-t border-gray-200">
+      <div className="text-center">
+        <h3 className="text-xl font-semibold text-electric-violet-800 mb-2">Stay in the loop</h3>
+        <p className="text-gray-600 mb-6">Sign up to hear when job matching goes live.</p>
+        <form className="flex flex-col sm:flex-row justify-center items-center gap-4">
+          <input
+            type="email"
+            placeholder="you@example.com"
+            className="px-4 py-2 border border-gray-300 rounded-md w-full sm:w-80"
           />
-          <BentoCard
-            dark
-            eyebrow="Integrations"
-            title="Meet leads where they are"
-            description="With thousands of integrations, no one will be able to escape your cold outreach."
-            graphic={<LogoTimeline />}
-            // `overflow-visible!` is needed to work around a Chrome bug that disables the mask on the graphic.
-            className="z-10 overflow-visible! lg:col-span-2 lg:rounded-tr-4xl"
-          />
-          <BentoCard
-            dark
-            eyebrow="Meetings"
-            title="Smart call scheduling"
-            description="Automatically insert intro calls into your leads' calendars without their consent."
-            graphic={<LinkedAvatars />}
-            className="lg:col-span-2 lg:rounded-bl-4xl"
-          />
-          <BentoCard
-            dark
-            eyebrow="Engagement"
-            title="Become a thought leader"
-            description="RadiantAI automatically writes LinkedIn posts that relate current events to B2B sales, helping you build a reputation as a thought leader."
-            graphic={
-              <div className="h-80 bg-[url(/screenshots/engagement.png)] bg-size-[851px_344px] bg-no-repeat" />
-            }
-            fade={['top']}
-            className="max-lg:rounded-b-4xl lg:col-span-4 lg:rounded-br-4xl"
-          />
-        </div>
-      </Container>
-    </div>
+          <Button className="bg-electric-violet-600 hover:bg-electric-violet-700" href="#">
+            Notify Me
+          </Button>
+        </form>
+      </div>
+    </Container>
   )
 }
 
@@ -195,17 +133,13 @@ export default function Home() {
     <div className="overflow-hidden">
       <Hero />
       <main>
-        <Container className="mt-10">
-          <LogoCloud />
-        </Container>
-        <div className="bg-linear-to-b from-white from-50% to-gray-100 py-32">
-          <FeatureSection />
-          <BentoSection />
-        </div>
-        <DarkBentoSection />
+        <StepsSection />
+        <FAQSection />
+        <MailingListFooter />
       </main>
-      <Testimonials />
-      <Footer />
+      <div className="relative z-10 bg-gradient-to-t from-white via-white/80 to-white/0">
+        <Footer />
+      </div>
     </div>
   )
 }

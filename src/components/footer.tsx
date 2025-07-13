@@ -10,16 +10,15 @@ function CallToAction() {
   return (
     <div className="relative pt-20 pb-16 text-center sm:py-24">
       <hgroup>
-        <Subheading>Get started</Subheading>
-        <p className="mt-6 text-3xl font-medium tracking-tight text-gray-950 sm:text-5xl">
-          Ready to dive in?
+        <Subheading>Join the waitlist</Subheading>
+        <p className="mt-6 text-3xl font-medium tracking-tight text-white sm:text-5xl">
+          overapplied.ai is a work in progress.
           <br />
-          Start your free trial today.
+          Sign up early to shape the future of hiring.
         </p>
       </hgroup>
-      <p className="mx-auto mt-6 max-w-xs text-sm/6 text-gray-500">
-        Get the cheat codes for selling and unlock your team&apos;s revenue
-        potential.
+      <p className="mx-auto mt-6 max-w-xs text-sm/6 text-white/80">
+        A smarter way to match with jobs—no resumes, no spam.
       </p>
       <div className="mt-6">
         <Button className="w-full sm:w-auto" href="#">
@@ -153,10 +152,10 @@ function Copyright() {
   )
 }
 
-export function Footer() {
+export function Footer({ className = '' }: { className?: string }) {
   return (
-    <footer>
-      <Gradient className="relative">
+    <footer className={className}>
+      <div className="relative bg-gradient-to-br from-[#c879ff] via-[#9a2fe8] to-[#12c2e9] text-white">
         <div className="absolute inset-2 rounded-4xl bg-white/80" />
         <Container>
           <CallToAction />
@@ -187,7 +186,7 @@ export function Footer() {
             </PlusGridRow>
           </PlusGrid>
         </Container>
-      </Gradient>
+      </div>
     </footer>
   )
 }
