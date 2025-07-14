@@ -1,12 +1,13 @@
-import '@/styles/tailwind.css'
-import type { Metadata } from 'next'
-
 export const metadata: Metadata = {
   title: {
     template: '%s - Radiant',
     default: 'Radiant - Close every deal',
   },
 }
+
+import '@/styles/tailwind.css'
+import './globals.css'
+import type { Metadata } from 'next'
 
 export default function RootLayout({
   children,
@@ -27,7 +28,9 @@ export default function RootLayout({
           href="/blog/feed.xml"
         />
       </head>
-      <body className="text-gray-950 antialiased">{children}</body>
+      <body className="text-gray-950 antialiased">
+        {children}
+      </body>
     </html>
   )
 }
